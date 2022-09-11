@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+/* the container for the entire todo list */
+.todo-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 90vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    overflow-y: auto;}
+
+/* title of the page */
+.todo-container h2 {
+    padding: 10px;
+    font-family: monospace;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* input textbox style */
+.todo-header input {
+    width: 92%;
+    border-radius: 5px;
+    height: 1.6em;
+    font-size: 1em;
+    font-family: "Trirong", serif;}
+
+/* button to add todos */
+.todo-header button {
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-family: "Trirong", serif;
+    background-color: darkorange;}
+
+/* list of todos */
+.todo-container ul {
+    list-style: circle;}
+
+/* todo items and editing*/
+.todo-list-item {
+    padding: 3px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+    font-family: "Trirong", serif;
+    display: flex;
+    flex-direction: row;}
+    
+.todo-list-item form {
+    width: 100%;
+    display: flex;}
+    
+.todo-list-item input {
+    flex-grow: 2;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: bisque;
+    font-family: "Trirong", serif;}
+
+/* buttons to edit and delete */
+.todo-list-item button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px;
+    font-family: "Trirong", serif;
+    background-color: rgb(162, 170, 165);}
+    
+.todo-list-item .cancel {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2px;
+    font-family: "Trirong", serif;
+    background-color: rgb(223, 43, 43);
+    margin-left: 5px;}
+    
+.todo-list-item div {
+    flex-grow: 2;}
+    
+.todo-list-item .edit {
+    color : rgb(162, 170, 165);
+    margin-right: 10px;
+    cursor:pointer;
+    text-decoration: none;}
+    
+.todo-list-item .remove {
+    color : rgb(243, 96, 96);
+    margin-right: 5px;
+    cursor:pointer;
+    text-decoration: none;}

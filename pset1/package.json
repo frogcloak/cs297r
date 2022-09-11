@@ -1,0 +1,20 @@
+{
+  "name": "todo-mongodb",
+  "version": "1.0.0",
+  "description": "todoapp with node.js and mongodb (hw1)",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "diana feng",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

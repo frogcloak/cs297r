@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>TODOs of the Day</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+<body>
+    <div class="todo-container">
+        <h2><span style="color:darkorange; opacity: revert;">TODOs</span> of the DAY</h1>
+        <div class="todo">
+            <form action="/" method="POST" class="todo-header">
+                <input autofocus type="text" name="content" aria-label="Enter a new todo item" placeholder=" E.g. Finish TODO app for CS279R">
+                <button type="submit"><span class="fas fa-plus"></span></button>
+            </form>
+            <ul class="todo-list">
+                <!-- The segment that dynamically updates based on current database status -->
+                <% todoTasks.forEach(details => { %>
+                    <li class="todo-list-item">
+                        <div class="todo-list-item-name"><%= details.content %></div>
+                        <a href="/edit/<%= details._id %>" class="edit">
+                            <span class="fas fa-edit"></span>
+                        </a>
+                        <a href="/remove/<%= details._id %>" class="remove">
+                            <span class="fas fa-times"></span>
+                        </a>
+                    </li>
+                    <% }) %>
+            </ul>
+        </div>
+    </div>
+</body>
